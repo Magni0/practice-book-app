@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify
 app = Flask(__name__)
 from database import cursor, connection
+from dotenv import load_dotenv
+load_dotenv()
+
 
 @app.route("/books", methods=["GET"])
 def book_index():
